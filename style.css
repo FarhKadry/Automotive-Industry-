@@ -119,7 +119,7 @@ section{
     max-width: 1700px;
 }
 .hero1{
-    margin-top: 100px;
+    padding-top: 100px;
 }
 .button1{
     display: flex;
@@ -138,4 +138,37 @@ section{
 .gradient_cont{
     border: none;
     outline: none;
+}
+.hero_graphic1{
+    position: absolute;
+    width: 161px;
+    height: 110px;
+    background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, #F4A235 0%, #CD3030 72.22%, #39293F 100%);
+    filter: blur(100px);
+    left: -54px;
+    top: 100px;
+    z-index: 3;
+}
+.hero_graphic2{
+    width: 646px;
+    height: 440px;
+    border-radius: 646px;
+    background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(244, 162, 53, 0.82) 0%, rgba(205, 48, 48, 0.82) 33.65%, rgba(57, 41, 63, 0.82) 100%);
+    filter: blur(150px);
+    right: -250px;
+    top: -200px;
+    position: absolute;
+}
+.hero1_modelContainer{
+    height: 221px;
+width: 1000px;
+overflow: visible;
+position: relative;
+}
+.hero1model{
+    position: absolute;
+    top: -100px;
+    left: -70px;
+height: 521px;
+width: 1000px;
 }
