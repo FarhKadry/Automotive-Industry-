@@ -29,19 +29,40 @@ body{
     background: var(--mainbg);
     color: var(--mainText);
     overflow-x: hidden;
+    position: relative;
 }
 .header_container .button2{
     justify-self: flex-end;
 }
+.hero_graphic3{
+    display: flex;
+    width: 859.455px;
+    height: 123.9px;
+    transform: rotate(9deg);
+    padding-bottom: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: -1;
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    border-radius: 947.455px;
+    background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(239, 161, 71, 0.80) 0%, rgba(205, 48, 48, 0.80) 73.08%, rgba(57, 41, 63, 0.80) 100%);
+    filter: blur(38px);
+}
 .header_container{
     display: flex;
-    padding: 22px 92px;
+    padding: 12px 92px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     max-width: 1840px;
+}
+.header_container .logo{
+    width: 246px;
+    display: flex;
 }
 .header_container .logo img{
     width: 70px;
@@ -87,8 +108,15 @@ h1{
 .h1_2{
     font-weight: 718;
 }
-h5{
+
+h4{
     font-size: 24px;
+}
+h5{
+    font-size: 20px;
+}
+h6{
+    font-size: 16px;
 }
 .flex_column{
     display: flex;
@@ -120,24 +148,13 @@ section{
 }
 .hero1{
     padding-top: 100px;
+    /* opacity: 0; */
 }
-.button1{
-    display: flex;
-    width: 302px;
-    height: 52px;
-    padding: 11px 65px;
-    justify-content: center;
-    align-items: center;
-}
-.gradient-wrapper {
-    width: fit-content;
-    padding: 0 7px 0 9px;
-    border-radius: 34px;
-    background: var(--gradient1);
-}
+
 .gradient_cont{
     border: none;
     outline: none;
+    border-radius: 22px;
 }
 .hero_graphic1{
     position: absolute;
@@ -160,15 +177,218 @@ section{
     position: absolute;
 }
 .hero1_modelContainer{
-    height: 221px;
+    height: 321px;
 width: 1000px;
 overflow: visible;
 position: relative;
 }
 .hero1model{
     position: absolute;
-    top: -100px;
-    left: -70px;
-height: 521px;
-width: 1000px;
+    top: -120px;
+    left: -130px;
+    height: 521px;
+    width: 1080px;
+}
+model-viewer {
+    margin: 0 auto;
+    transition-duration: 1000ms;
+}
+model-viewer::part(default-progress-bar) {
+    display: none;
+}
+.hero_splash_container {
+    width: 120vw;
+    height: 1012px;
+    position: absolute;
+    top: -500px;
+    left: -10vw;
+    /* z-index: 99999999; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_splash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, #F4A235 0%, #CD3030 71.15%, #39293F 100%);
+    filter: blur(75px);
+    border-radius: 50%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    animation: splashAnim 1200ms ease-in-out forwards;
+}
+
+.splash_logo {
+    position: relative;
+    z-index: 2;
+    top: 180px;
+    opacity: 0;
+    animation: splashAnim 800ms ease-in-out 1s forwards;
+}
+
+.splash_logo img {
+    width: 336px;
+}
+@keyframes splashAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.heroCard{
+    display: flex;
+    width: 300px;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 22px;
+    background: linear-gradient(45deg, #17161200 70%, #CD3030 200%);
+    box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+.hero1Text{
+position: relative;
+}
+.text_left{
+     text-align: left;
+}
+.team_logo{
+    height: 25px;
+    width: auto;
+}
+.heroCard .team_logo{
+    height: 16px;
+    width: auto;
+    align-self: flex-start;
+}
+.smallBtn{
+    border-radius: 31px;
+    border: 0.5px solid #D0C1D7;
+    background: var(--mainbg, #0B0B09);
+    border-radius: 31px;
+    border: 0.5px solid #D0C1D7;
+    background: var(--mainbg, #0B0B09);
+}
+button {
+    border: none;
+}
+.gradient_wrapper {
+    width: fit-content;
+    padding: 1px;
+    border-radius: 26px;
+    background: var(--gradient1);
+    z-index: 10;
+}
+
+.button1{
+    display: flex;
+    padding: 11px 65px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    background: linear-gradient(90deg, #0B0B09 -48.58%, #484846 -45.35%, #0B0B09 -5.48%);
+    box-shadow: var(--glow);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    color: white;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+}
+.button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(153.11% 75% at 50% 50%, #0B0B09 54.64%, #FF4C1A 94.4%, #0B0B09 100%);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    border-radius: 24px;
+    z-index: -1;
+}
+.button1:hover{
+    gap: 10px;
+    box-shadow: 0 2px 16px 0 rgba(205, 48, 48, 0.36);
+}
+.button1:hover::before {
+    opacity: 1;
+}
+
+.hero1 .flex_column{
+    align-items: center;
+    justify-content: center;
+}
+.button1 img{
+    width: 0px;
+    height: auto;
+    transition: all 200ms ease-in-out;
+}
+.button1:hover img{
+    width: 24px;
+    height: auto;
+}
+.button1_size2{
+padding: 10px 22px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+font-size: 16px;
+
+}
+header .buttonsCont{
+    display: flex;
+align-items: center;
+gap: 22px;
+}
+.button2{
+    border: 1px solid var(--mainText);
+    transition: all 200ms ease-in-out;
+}
+.button2:hover{
+    border: 1px solid transparent;
+}
+.btn2_wrap{
+   background: none;
+   transition: all 200ms ease-in-out;
+}
+.btn2_wrap:hover{
+   background: var(--gradient1);
+}
+.carousel-wrapper, .carousel-wrapper2  {
+    overflow: hidden;
+    position: relative;
+}
+.carousel {
+    display: flex;
+    padding: 34px 0;
+    align-items: center;
+    gap: 42px;
+    border-top: 1px solid rgba(19, 66, 5, 0.30);
+    border-bottom: 1px solid rgba(19, 66, 5, 0.30);
+    width: fit-content;
+}
+.carousel img{
+    height: 25px;
+    width: auto;
+}
+.mainTextbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
 }
