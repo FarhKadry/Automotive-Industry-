@@ -5,13 +5,14 @@
     --gradient1:linear-gradient(93deg, #F4A235 -0.94%, #CD3030 62.65%, #39293F 97.76%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
     --gradient2:radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(244, 162, 53, 0.86) 0%, rgba(205, 48, 48, 0.86) 72.22%, rgba(57, 41, 63, 0.86) 100%);
     --glow:0 2px 10.2px 0 rgba(205, 48, 48, 0.36);
+    --bg2: #171612;
 }
 *{
     margin: 0;
     padding: 0;
     color: var(--mainaccent);
     font-family: Syne;
-    text-align: center;
+    /* text-align: center; */
 
 }
 header{
@@ -108,7 +109,13 @@ h1{
 .h1_2{
     font-weight: 718;
 }
-
+h2{
+    font-size: 40px;
+    font-weight: 800;
+}
+h3{
+    font-size: 32px;
+}
 h4{
     font-size: 24px;
 }
@@ -137,6 +144,8 @@ section{
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 .container{
     display: flex;
@@ -378,8 +387,6 @@ gap: 22px;
     padding: 34px 0;
     align-items: center;
     gap: 42px;
-    border-top: 1px solid rgba(19, 66, 5, 0.30);
-    border-bottom: 1px solid rgba(19, 66, 5, 0.30);
     width: fit-content;
 }
 .carousel img{
@@ -389,6 +396,126 @@ gap: 22px;
 .mainTextbox{
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+.alignCenter{
     align-items: center;
-    gap: 18px;
+    justify-content:center;
+}
+.gradientext{
+    background: linear-gradient(270deg, #0B0B09 -16.76%, #D0C1D7 50.9%, #0B0B09 118.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mainTextbox span{ 
+    width: 100%;
+    height: 4px;
+    border-radius: 50%;
+    background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(244, 162, 53, 0.86) 0%, rgba(205, 48, 48, 0.86) 72.22%, rgba(57, 41, 63, 0.86) 100%);
+}
+.padded_container{
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+.landingsec2Flex{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+.text_bold{
+    font-weight: 700;
+}
+.text_center{
+    text-align: center;
+}
+.card1{
+    border-radius: 24px;
+    background: var(--bg2, #171612);
+    box-shadow: var(--glow);
+    display: flex;
+    padding: 30px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.card1_wrapper{
+    width: calc(33% - 24px);
+}
+.card1 img{
+    width: 94px;
+height: 94px;
+}
+p{
+    font-size: 18px;
+}
+.landingsec3Flex{
+    display: flex;
+padding: 80px 100px;
+justify-content: center;
+align-items: flex-start;
+gap: 72px;
+}
+.sec3Car{
+    background-image: url(public/images/sec3car.png);
+    width: 262px;
+    height: 725px;
+    aspect-ratio: 262/725;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sec3Car img{
+    width: 100%;
+    mix-blend-mode: lighten;
+}
+.blur_in{
+    opacity: 0;
+     animation: blur-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.move_focus{
+    position: relative;
+    transform: translateY(100px);
+    animation: move-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes move-focus-in{
+  0% {
+    transform: translateY(100px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes blur-in {
+  0% {
+            filter: blur(20px);
+    opacity: 0;
+  }
+  100% {
+            filter: blur(80px);
+    opacity: 1;
+  }
+}
+.scroll_animate2{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 35%;
+}
+.scroll_animate{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 15%;
 }
