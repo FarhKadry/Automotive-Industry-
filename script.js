@@ -54,3 +54,11 @@ ScrollTrigger.create({
         }
     }
 });
+let neonView = document.querySelector('.car_neonView');
+neonView.innerHTML = `
+  ${'<div class="neonCell"><span></span></div>'.repeat(25)}
+`;
+let neonView2 = document.querySelector('.car_neonView2');
+neonView2.innerHTML = `
+  ${'<div class="neonCell"><span></span></div>'.repeat(25)}
+`;
