@@ -6,6 +6,7 @@
     --gradient2:radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(244, 162, 53, 0.86) 0%, rgba(205, 48, 48, 0.86) 72.22%, rgba(57, 41, 63, 0.86) 100%);
     --glow:0 2px 10.2px 0 rgba(205, 48, 48, 0.36);
     --bg2: #171612;
+    --accent:#E77D33;
 }
 *{
     margin: 0;
@@ -116,6 +117,17 @@ h1{
 h2{
     font-size: 40px;
     font-weight: 800;
+}
+.h2_2{
+color: var(--accent);
+font-size: 48px;
+font-weight: 700;
+/* line-height: 60%; */
+letter-spacing: -1.44px;
+margin-bottom: 12px;
+padding-bottom: 2px;
+border-bottom: 3px solid var(--accent);
+width: fit-content;
 }
 h3{
     font-size: 32px;
@@ -284,70 +296,6 @@ model-viewer::part(default-progress-bar) {
         transform: translateY(-100vh);
     }
 }
-.heroCard{
-    display: flex;
-    width: 300px;
-    padding: 12px 22px;
-    box-sizing: border-box;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 22px;
-    background: linear-gradient(45deg, #17161200 70%, #CD3030 200%);
-    box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 3;
-}
-.button1_size4{
-    padding: 6px 12px;
-}
-.button1_size4 img{
-    height: 12px;
-    width: 12px;
-    transform: scaleX(1);
-    transform: scaleY(1);
-}
-.heroCard .gradient_wrapper{
-    align-self: flex-end;
-}
-.hero1Text{
-position: relative;
-    opacity: 0;
-    animation: splashAnim 1000ms ease-in-out 3s forwards;
-}
-.text_left{
-     text-align: left;
-}
-.team_logo{
-    height: 25px;
-    width: auto;
-}
-.heroCard .team_logo{
-    height: 16px;
-    width: auto;
-    align-self: flex-start;
-}
-.smallBtn{
-    border-radius: 31px;
-    border: 0.5px solid #D0C1D7;
-    background: var(--mainbg, #0B0B09);
-    border-radius: 31px;
-    border: 0.5px solid #D0C1D7;
-    background: var(--mainbg, #0B0B09);
-}
-button {
-    border: none;
-}
-.gradient_wrapper {
-    width: fit-content;
-    padding: 1px;
-    border-radius: 26px;
-    background: var(--gradient1);
-    z-index: 10;
-}
-
 .button1{
     display: flex;
     padding: 11px 65px;
@@ -388,10 +336,7 @@ button {
     opacity: 1;
 }
 
-.hero1 .flex_column{
-    align-items: center;
-    justify-content: center;
-}
+
 .button1 img{
     width: 0px;
     height: auto;
@@ -401,13 +346,91 @@ button {
     width: 24px;
     height: auto;
 }
-.button1_size2{
-padding: 10px 22px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-font-size: 16px;
+.heroCard{
+    display: flex;
+    width: 300px;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 22px;
+    background: linear-gradient(45deg, #17161200 70%, #CD3030 200%);
+    box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 9;
+}
+.button1_size4{
+    padding: 6px 12px;
+}
+.button1_size4:hover {
+    padding: 6px 16px;
+    height: fit-content;
+}
+.button1_size4 img{
+    height: 12px;
+    width: 12px;
+    transform: scaleX(1);
+    transform: scaleY(1);
+}
+.button1_size4:hover img {
+    width: 12px;
+    height: 12px;
+}
+.heroCard .gradient_wrapper{
+    align-self: flex-end;
+    
+}
+.hero1Text{
+position: relative;
+    opacity: 0;
+    animation: splashAnim 1000ms ease-in-out 3s forwards;
+}
+.text_left{
+     text-align: left;
+}
+.team_logo{
+    height: 25px;
+    width: auto;
+}
+.heroCard .team_logo{
+    height: 16px;
+    width: auto;
+    align-self: flex-start;
+}
+.smallBtn{
+    border-radius: 31px;
+    border: 0.5px solid #D0C1D7;
+    background: var(--mainbg, #0B0B09);
+    border-radius: 31px;
+    border: 0.5px solid #D0C1D7;
+    background: var(--mainbg, #0B0B09);
+}
+button {
+    border: none;
+}
+.gradient_wrapper {
+    width: fit-content;
+    padding: 1px;
+    border-radius: 26px;
+    background: var(--gradient1);
+    z-index: 10;
+}
 
+
+.hero1 .flex_column{
+    align-items: center;
+    justify-content: center;
+}
+.button1_size2{
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    max-height: 38px;
 }
 header .buttonsCont{
     display: flex;
@@ -626,7 +649,6 @@ flex-direction: row;
     filter: blur(16px);
     opacity: 0;
     transform: scale(0.9);
-
     transition:
         opacity 200ms ease,
         filter 200ms ease,
@@ -661,7 +683,6 @@ flex-direction: row;
 }
 .road-path2 .roadPath2{
     width: 100%;
-
 }
 .roadCenter{
     width: 100%;
@@ -669,4 +690,110 @@ flex-direction: row;
     top: 15%;
     left: 0;
     z-index: 3;
+}
+.card2_wrapper{
+width: 30%;
+}
+.card2{
+    display: flex;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 24px;
+    gap: 10px;
+    border: 1px solid transparent;
+    background: linear-gradient(229deg, rgba(244, 162, 53, 0.00) -12.8%, rgba(205, 48, 48, 0.00) 19.52%, rgba(57, 41, 63, 0.00) 53.35%), var(--bg2, #171612);
+    box-shadow: var(--glow);
+}
+.filterTitle{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.filtersFlex{
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
+.filtersFlex div{
+    display: flex;
+    max-width: 90px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.filtersFlex div img{
+    height: 94px;
+    width: auto;
+    transition: all 300ms ease-in-out;
+}
+.filtersFlex div .speed{
+    mix-blend-mode:lighten;
+}
+.filtersFlex div .neonCell{
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.filtersFlex div:hover .neonCell span{
+    opacity: 1;
+}
+.filtersFlex div:hover  img{
+    transform: scale(1.1);
+}
+.carCardsCont{
+    width: 100%;
+    overflow: hidden;
+    margin: 42px;
+}
+.carCardImg{
+    height: 250px;
+    width: auto;
+    transition: all 200ms ease-in-out;
+}
+.carCardLogo{
+    height: 19px;
+    width: auto;
+    align-self: start;
+}
+.card2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 24px;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(229deg, #F4A235 -12.8%, rgba(205, 48, 48, 0.50) 19.52%, rgba(57, 41, 63, 0.00) 53.35%), #171612;
+    transition: all 200ms ease-in;
+}
+.card2:hover::before{
+    opacity: 1;
+}
+.card2 .gradient_wrapper{
+    align-self: flex-end;
+}
+.card2:hover .carCardImg{
+    scale: 1.1;
+}
+.cardCardImgCont{
+    max-width: 100%;
+    overflow: visible;
+    z-index: 2
+}
+.carCardContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
 }

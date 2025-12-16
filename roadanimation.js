@@ -31,14 +31,9 @@ requestAnimationFrame(() => {
     const path = road.querySelector('.road-path');
     const length = path.getTotalLength();
 
-    // 1️⃣ Properly hide the path
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
-
-    // 2️⃣ Force layout (prevents dashed glitch)
     path.getBoundingClientRect();
-
-    // 3️⃣ Scroll animation
     window.addEventListener('scroll', () => {
       const rect = road.getBoundingClientRect();
       const windowHeight = window.innerHeight;
@@ -79,18 +74,18 @@ roadpt2.innerHTML = `
 </svg>
 `;
 
-let road2 = document.getElementById('road2'); // Changed from 'road'
+let road2 = document.getElementById('road2');
 
 requestAnimationFrame(() => {
   requestAnimationFrame(() => {
-    const path = road2.querySelector('.road-path'); // Changed: use road2 and correct class
+    const path = road2.querySelector('.road-path'); 
     const length = path.getTotalLength();
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
     path.getBoundingClientRect();
     
     window.addEventListener('scroll', () => {
-      const rect = road2.getBoundingClientRect(); // Changed from 'road'
+      const rect = road2.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const progress = 1 - rect.top / windowHeight;
       const clamped = Math.min(Math.max(progress, 0), 1);

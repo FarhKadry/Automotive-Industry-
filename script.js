@@ -18,34 +18,28 @@ let baseAnimation = gsap.to(carousel, {
     }
 });
 
-// NORMAL ANIM
 baseAnimation.timeScale(1);
 
-// CHANGE DIRECTION BASED ON SCROLL
 ScrollTrigger.create({
     trigger: '.carousel-wrapper',
     start: 'top bottom',
     end: 'bottom top',
     onUpdate: (self) => {
         let velocity = self.getVelocity();
-        
-        // OSCROLLING IN OPPOSITE DIRECTION
+
         if (velocity > 0) {
-            // down = left
             gsap.to(baseAnimation, {
                 timeScale: 1 + Math.abs(velocity / 400),
                 duration: 0.5,
                 ease: 'power1.out'
             });
         } else if (velocity < 0) {
-            // up = right
             gsap.to(baseAnimation, {
                 timeScale: -1 - Math.abs(velocity / 400),
                 duration: 0.5,
                 ease: 'power1.out'
             });
         } else {
-            // normal animation
             gsap.to(baseAnimation, {
                 timeScale: 1,
                 duration: 0.5,
@@ -54,6 +48,7 @@ ScrollTrigger.create({
         }
     }
 });
+// CARNEOINTERACTIONS
 let neonView = document.querySelector('.car_neonView');
 neonView.innerHTML = `
   ${'<div class="neonCell"><span></span></div>'.repeat(25)}
