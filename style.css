@@ -39,18 +39,15 @@ body{
     justify-self: flex-end;
 }
 .hero_graphic3{
-    display: flex;
     width: 859.455px;
     height: 123.9px;
     transform: rotate(9deg);
     padding-bottom: 40px;
-    justify-content: flex-end;
-    align-items: center;
     z-index: -1;
     position: absolute;
     bottom: 0px;
     right: 40px;
-    border-radius: 947.455px;
+    border-radius: 50%;
     background: radial-gradient(51.4% 51.7% at 48.6% 44.38%, rgba(239, 161, 71, 0.80) 0%, rgba(205, 48, 48, 0.80) 73.08%, rgba(57, 41, 63, 0.80) 100%);
     filter: blur(38px);
     opacity: 0;
@@ -214,16 +211,15 @@ section{
     right: -250px;
     top: -200px;
     opacity: 0;
-
     position: absolute;
     animation: splashAnim 800ms ease-in-out 2.2s forwards;
 
 }
 .hero1_modelContainer{
     height: 321px;
-width: 1000px;
-overflow: visible;
-position: relative;
+    width: 1000px;
+    overflow: visible;
+    position: relative;
 }
 .hero1model{
     position: absolute;
@@ -396,6 +392,10 @@ model-viewer::part(default-progress-bar) {
     
 }
 .hero1Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 position: relative;
     opacity: 0;
     animation: splashAnim 1000ms ease-in-out 3s forwards;
@@ -435,6 +435,7 @@ button {
 .hero1 .flex_column{
     align-items: center;
     justify-content: center;
+        width: 100%;
 }
 .button1_size2{
     padding: 10px 22px;
@@ -514,6 +515,7 @@ gap: 22px;
 .landingsec2Flex{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 24px;
     align-self: stretch;
 }
@@ -827,6 +829,11 @@ width: 30%;
     top: -50px;
     padding: 32px 28px;
     background: linear-gradient(-45deg, #17161200 70%, #CD3030 200%);
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 22px;
+    box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
 }
 .statsBlock1{
     display: flex;
