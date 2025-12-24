@@ -79,7 +79,7 @@ const sec2CardsContainer = document.getElementById("sec2Cards");
 
 for (let i = 0; i < sec2CardsData.length; i++) {
     sec2CardsContainer.innerHTML += `
-        <div class="gradient_wrapper card1_wrapper">
+        <div class="gradient_wrapper card1_wrapper move_focus scroll_animate2">
             <div class="card1 gradient_cont">
                 <img src="${sec2CardsData[i].icon}" alt="">
                 <h3 class="text_bold">

@@ -221,27 +221,31 @@ section{
     overflow: visible;
     position: relative;
 }
-.hero1model{
+.hero1model {
     position: absolute;
-    filter: blur(0.5);
-    top: -270px;
-    left: -100vw;
+    top: -120px;          /* final position */
+    left: -130px;
     height: 521px;
     width: 1080px;
-    animation: hero1Anim 1s ease-in-out 2.8s both;
+
+    filter: blur(2px);
+    transform: translateX(-100vw) translateY(-150px);
+    
+    animation: hero1Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
+    will-change: transform, filter;
 }
+
 @keyframes hero1Anim {
-    from{
-        filter: blur(0.5);
-        top: -270px;
-        left: -100vw;
+    from {
+        filter: blur(6px);
+        transform: translateX(-100vw) translateY(-150px);
     }
-    to{
+    to {
         filter: blur(0);
-        top: -120px;
-        left: -130px;
+        transform: translateX(0) translateY(0);
     }
 }
+
 model-viewer {
     margin: 0 auto;
     transition-duration: 1000ms;
@@ -514,16 +518,18 @@ gap: 22px;
 }
 .landingsec2Flex{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 24px;
     align-self: stretch;
+        flex-wrap: wrap;
 }
 .text_bold{
     font-weight: 700;
 }
 .text_center{
     text-align: center;
+    justify-content: center;
 }
 .card1{
     border-radius: 24px;
@@ -535,8 +541,12 @@ gap: 22px;
     align-items: flex-start;
     gap: 12px;
 }
-.card1_wrapper{
-    width: calc(33% - 24px);
+.card2_wrapper{
+    min-width: 360px;
+    max-width: 360px;
+}
+.landingsec2Flex .card1{
+    min-height: 340px
 }
 .card1 img{
     width: 94px;
@@ -728,7 +738,10 @@ width: 30%;
 .filtersFlex{
     display: flex;
     align-items: center;
-    gap: 58px;
+    gap: 12px;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 387px;
 }
 .filtersFlex div{
     display: flex;
@@ -758,12 +771,34 @@ width: 30%;
     opacity: 1;
 }
 .filtersFlex div:hover  img{
-    transform: scale(1.1);
+        transform: scale(1.05) rotate(3deg);
 }
 .carCardsCont{
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin: 42px;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+    position: relative;
+}
+.carCardsFade{
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(270deg, rgba(11, 11, 9, 0.00) 0%, #0B0B09 81.73%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+}
+.carCardsFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    margin-bottom: 22px;
+    position: relative;
+    left: 1100px;
 }
 .carCardImg{
     height: 250px;
@@ -839,13 +874,12 @@ width: 30%;
     flex-direction: column;
     border-radius: 22px;
     box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px);
 }
 .statsBlock1{
     display: flex;
     flex-direction: column;
     gap: 13px;
-    width: 25%;
+    width: 50%;
 }
 .statsBlock1 span{
     width: 100%;
@@ -869,7 +903,16 @@ width: 30%;
     display: flex;
     margin-top: 12px;
     gap: 12px;
+    align-items: center;
     justify-content: space-between;
+}
+.statsFlex2{
+    flex-direction: row;
+    width: calc(50% - 12px );
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    display: flex;
 }
 .carSpecifics .btn2_wrap{
     position: absolute;
@@ -898,7 +941,7 @@ align-self: stretch;
     box-shadow: var(--glow);
 }
 .progressFlex{
-    width: 50%;
+    width: calc(50% - 12px );
     gap: 10px;
 }
 .progressFlex .content{
@@ -935,6 +978,7 @@ align-self: stretch;
     position: relative;
     gap: 8px;
     overflow: hidden;
+     height: -webkit-fill-available;;
     
 }
 .sec6Card1 h1{
@@ -963,7 +1007,8 @@ align-self: stretch;
     max-width: 500px;
 }
 .sec6Card2Wrapper{
-    width: calc(50% - 19px)
+    width: calc(50% - 19px);
+     height: -webkit-fill-available;;
 }
 .sec6Card2 .img1{
     mix-blend-mode: normal;
@@ -985,7 +1030,6 @@ align-self: stretch;
     align-items: flex-start;
     position: relative;
     left: -5%;
-    border-radius: 61px;
     border: 1px solid var(--accent);
     background: rgba(23, 22, 18, 0.01);
     width: 100%;
@@ -993,6 +1037,7 @@ align-self: stretch;
     box-sizing: border-box;
     border-radius: 0 58px 58px 0;
     gap: 12px;
+    margin-bottom: 40px;
 }
 .hiddenOverflow{
     overflow: hidden;
@@ -1016,7 +1061,7 @@ align-self: stretch;
     background-size: 110%;
     background-attachment: fixed;
     padding-top: 80px;
-    padding-bottom: 200px;
+    padding-bottom: 180px;
     padding-left: 0;
     padding-right: 0;
     position: relative;
@@ -1064,18 +1109,7 @@ align-self: stretch;
     opacity: 1;
   }
 }
-.scroll_animate2{
-    view-timeline: --scroll-tl;
-    animation-timeline: --scroll-tl;
-    animation-delay: cover 10%;
-    animation-range: cover 10% cover 35%;
-}
-.scroll_animate{
-    view-timeline: --scroll-tl;
-    animation-timeline: --scroll-tl;
-    animation-delay: cover 10%;
-    animation-range: cover 10% cover 15%;
-}
+
 footer{
     width: 100%;
     background: linear-gradient(180deg, rgba(11, 11, 9, 0.00) 0%, #0B0B09 20%);
@@ -1218,4 +1252,60 @@ filter: blur(50px);
     left: unset;
     top: unset;
     filter: blur(100px);
+}
+
+@keyframes move-focus-in{
+  0% {
+    transform: translateY(100px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+.move_focus{
+    position: relative;
+    transform: translateY(100px);
+    animation: move-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--mainbg);
+  box-shadow: var(--glow);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--gradient1);
+  border-radius: 0;
+
+}
+.scroll_animate2{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 35%;
+}
+.scroll_animate{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 15%;
+}
+#carsSection{
+    position: relative;
+    overflow: hidden;
 }
