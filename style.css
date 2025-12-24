@@ -1360,3 +1360,40 @@ footer{
         transform: scaleY(1);
     }
 }
+.podium2{
+    background-image: url(public/images/podium3.png);
+    position: relative;
+}
+.podium2_flash{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    object-fit: contain;
+  animation: fadeOnOff 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes fadeOnOff {
+  0%   { opacity: 0; }
+  15%  { opacity: 1; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.fade-on-off {
+  animation: fadeOnOff 6s ease-in-out infinite;
+}
+.btnsFlex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+.btnsFlex .button2{
+    text-transform: capitalize;
+    width: 163px;
+}

@@ -1,3 +1,4 @@
+
 // CAROUSEL 1
 let carousel = document.getElementById('carousel');
 // CAROUSEL INFINITE
@@ -176,8 +177,9 @@ for (let i = 0; i < carsData.length; i++) {
             </button>
           </a>
         </div>
-
       </div>
     </div>
   `;
 }
+
+
