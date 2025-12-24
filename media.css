@@ -131,6 +131,12 @@ nav{
 .road-path, .road-path2 {
     height: 200px;
 }
+.podium2 model-viewer{
+        width: 100%;
+        height: 55%;
+        position: relative;
+        bottom: -7%;
+}
 }
 
 @media (min-width: 601px) and (max-width: 1041px){
@@ -281,6 +287,12 @@ nav{
 }
 .road-path, .road-path2 {
     height: unset;
+}
+.podium2 model-viewer{
+        width: 100%;
+        height: 61%;
+        position: relative;
+        bottom: -7%;
 }
 }
 /* DESKTOP */
@@ -443,5 +455,13 @@ nav{
 }
 .road-path, .road-path2 {
     height: unset;
+}
+.podium2 model-viewer{
+        width: 100%;
+    height: 90%;
+    bottom: 5%;
+}
+.engineContainer model-viewer{
+    height: 100%;
 }
 }

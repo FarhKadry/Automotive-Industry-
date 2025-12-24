@@ -57,11 +57,14 @@
         ar-modes="webxr scene-viewer quick-look"
         disable-zoom
         disable-tap
+        disable-tap
+        interaction-prompt="auto"
+        interaction-prompt-threshold="1000"
+        camera controls
         exposure="0.7"
         tone-mapping="neutral"
         shadow-intensity="2"
         camera-orbit="0deg 85deg 5m"
-        disable-tap
         field-of-view="20deg">
         </model-viewer>
 
@@ -242,6 +245,8 @@
                 ar-modes="webxr scene-viewer quick-look"
                 disable-zoom
                 disable-tap
+                disable-zoom
+                interaction-prompt="none"
                 tone-mapping="neutral"
                 camera-controls
                 shadow-intensity="2"
@@ -291,78 +296,38 @@
             </div>
         </div>
      </section>
-     <!-- SECTION6 -->
-      <section>
+         <section>
         <div class="container padded_container">
              <div class="mainTextbox">
-                <h2 class="gradientext fade_in scroll_animate2 text_center">What makes us special?</h2>
+                <h2 class="gradientext fade_in scroll_animate2 text_center">The Engine</h2>
                 <span class="scale_in scroll_animate2"></span>
-                    <h4 class="text_uppercase text_grey text_regular text_center fade_in scroll_animate2"> confident cornering and handling in every driving condition.</h4>
             </div>
-            <div class="section6Flex">
-                <!-- 1 -->
-                <div class="gradient_wrapper sec6Card1Wrapper">
-                    <div class="gradient_cont card1 sec6Card1">
-                        <img src="public/images/sec6img01.png">
-                        <h1>01</h1>
-                        <h3 class="text_bold">
-                        Precision & Victory
-                        </h3>
-                        <p class="text_grey">Our engineering philosophy is built around performance without compromise. From aerodynamics, our innovations have earned recognition across motorsport competitions.</p>
-                        </div>
-                </div>
-                <!-- 2 -->
-                <div class="gradient_wrapper sec6Card1Wrapper sec6Card2Wrapper">
-                    <div class="gradient_cont card1 sec6Card1 sec6Card2">
-                        <img class="img1" src="public/images/sec6img02.png">
-                        <h1>02</h1>
-                        <h3 class="text_bold">
-                        Reliable engines
-                    </h3>
-                    <p class="text_grey">Built with high-precision components for long-lasting performance, consistent output, and dependable strength under extreme pressure.</p>
-                    </div>
-                </div>
-                <!-- 3 -->
-                 <div class="gradient_wrapper sec6Card1Wrapper sec6Card2Wrapper">
-                    <div class="gradient_cont card1 sec6Card1 sec6Card2">
-                        <img class="img1 img2" src="public/images/sec6img03.png">
-                        <h1>03</h1>
-                        <h3 class="text_bold">
-                        Steady Tires
-                    </h3>
-                    <p class="text_grey">Built with high-precision components for long-lasting performance, consistent output, and dependable strength under extreme pressure.</p>
-                    </div>
-                </div>
+            <div class="carPodium1 podium2 engineContainer">
+  <div class="neonCell"><span id="neonSpan"></span></div>
+
+  <!-- MODEL -->
+  <model-viewer 
+    id="engineModel"
+    src="public/models/engine_exploded_view.glb"
+    camera-controls
+    disable-zoom
+    disable-tap
+    tone-mapping="neutral"
+    poster="poster.webp"
+    shadow-intensity="1"
+    camera-orbit="2052deg 83.04deg 6.635m"
+    field-of-view="30deg">
+  </model-viewer>
+</div>
+
+<!-- BUTTON -->
+<div class="gradient_wrapper engBtn">
+  <button id="engBtn" class="button1">Disassemble</button>
+</div>
+
             </div>
-        </div>
-      </section>
-      <!-- SECTION 7 -->
-      <section class="flex_column sec7">
-        <div class="sec7_overlay sec7Separator"></div>
-        <div class="sec7_overlay sec7Separator sec7Separator2"></div>
-        <div class="sec7_overlay move_inLeft scroll_animate2"></div>
-        <div class="container padded_container">
-             <div class="mainTextbox">
-                <h2 class="gradientext fade_in scroll_animate2 text_center">Built Beyond Standards</h2>
-                <span class="scale_in scroll_animate2"></span>
-                    <h4 class="text_uppercase text_grey text_regular text_center fade_in scroll_animate2">Advanced monocoque chassis engineered for maximum rigidity</h4>
-            </div>
-        </div>
-        <div class="container hiddenOverflow">
-                <div class="sec7Card1">
-                     <h3 class="text_bold">
-                        Adaptive Aero System
-                        </h3>
-                        <p class="text_grey">Real-time aerodynamic adjustments for sharper control, better grip, and maximum stability at any speed.</p>
-                </div>
-                <div class="sec7Card1 sec7Card2">
-                     <h3 class="text_bold">
-                        Adaptive Aero System
-                        </h3>
-                        <p class="text_grey">Real-time aerodynamic adjustments for sharper control, better grip, and maximum stability at any speed.</p>
-                </div>
-            </div>
-      </section>
+     </section>
+<!-- FOOTER -->
        <footer>
         <div class="footer_decor1"></div>
         <div class="footer_decor1 footer_decor2"></div>
@@ -419,6 +384,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="modelFunctions.js"></script>
     <script src="script.js"></script>
     <script src="roadanimation.js"></script>
 </body>
