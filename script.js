@@ -92,3 +92,92 @@ for (let i = 0; i < sec2CardsData.length; i++) {
         </div>
     `;
 }
+const carsFlex = document.getElementById("carsFlex");
+
+const carsData = [
+  {
+    number: "01",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo01.svg",
+    image: "public/images/poster01.png",
+  },
+  {
+    number: "02",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo02.svg",
+    image: "public/images/poster02.png",
+  },
+  {
+    number: "03",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo03.svg",
+    image: "public/images/poster03.png",
+  },
+  {
+    number: "04",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo04.svg",
+    image: "public/images/poster04.png",
+  },
+  {
+    number: "05",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo05.svg",
+    image: "public/images/poster05.png",
+  },
+  {
+    number: "06",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo06.svg",
+    image: "public/images/poster06.png",
+  },
+  {
+    number: "07",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo07.svg",
+    image: "public/images/poster07.png",
+  },
+  {
+    number: "08",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo08.svg",
+    image: "public/images/poster08.png",
+  },
+  {
+    number: "09",
+    name: "aramco AMR ‘25",
+    logo: "public/images/logo09.svg",
+    image: "public/images/poster09.png",
+  }
+];
+
+for (let i = 0; i < carsData.length; i++) {
+  carsFlex.innerHTML += `
+    <div class="gradient_wrapper card1_wrapper card2_wrapper">
+      <div class="card2 gradient_cont">
+        
+        <div class="flex_column carCardContent">
+          <h2 class="h2_2">${carsData[i].number}</h2>
+          <h4 class="text_bold text_uppercase">
+            ${carsData[i].name}
+          </h4>
+          <img class="carCardLogo" src="${carsData[i].logo}" alt="">
+        </div>
+
+        <div class="cardCardImgCont">
+          <img class="carCardImg" src="${carsData[i].image}" alt="">
+        </div>
+
+        <div class="gradient_wrapper">
+          <a href="product${i + 1}.html">
+            <button class="button1 button1_size2">
+              View model
+              <img src="public/images/arrow1.svg">
+            </button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  `;
+}
