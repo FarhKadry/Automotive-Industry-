@@ -223,7 +223,7 @@ section{
 }
 .hero1model{
     position: absolute;
-    filter: blur(1);
+    filter: blur(0.5);
     top: -270px;
     left: -100vw;
     height: 521px;
@@ -232,7 +232,7 @@ section{
 }
 @keyframes hero1Anim {
     from{
-        filter: blur(1);
+        filter: blur(0.5);
         top: -270px;
         left: -100vw;
     }
@@ -553,6 +553,12 @@ p{
     align-items: flex-start;
     gap: 72px;
     flex-direction: row;
+}
+.sec3CarCont{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .sec3Car{
     background-image: url(public/images/sec3car.png);
@@ -1074,7 +1080,13 @@ footer{
     width: 100%;
     background: linear-gradient(180deg, rgba(11, 11, 9, 0.00) 0%, #0B0B09 20%);
     z-index: 999;
+    height: 100vh;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .footer_container{
     display: flex;

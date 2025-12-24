@@ -57,3 +57,38 @@ let neonView2 = document.querySelector('.car_neonView2');
 neonView2.innerHTML = `
   ${'<div class="neonCell"><span></span></div>'.repeat(25)}
 `;
+const sec2CardsData = [
+    {
+        icon: "public/images/sec2icon01.svg",
+        title: "Precision & Victory",
+        text: "Our engineering philosophy is built around performance without compromise. From aerodynamics, our innovations have earned recognition across motorsport competitions."
+    },
+    {
+        icon: "public/images/sec2icon02.svg",
+        title: "Relentless Innovation",
+        text: "We continuously push the boundaries of motorsport technology, transforming bold ideas into race-winning solutions."
+    },
+    {
+        icon: "public/images/sec2icon03.svg",
+        title: "Track-Tested Excellence",
+        text: "Every component is validated under real racing conditions to ensure reliability, speed, and dominance on track."
+    }
+];
+
+const sec2CardsContainer = document.getElementById("sec2Cards");
+
+for (let i = 0; i < sec2CardsData.length; i++) {
+    sec2CardsContainer.innerHTML += `
+        <div class="gradient_wrapper card1_wrapper">
+            <div class="card1 gradient_cont">
+                <img src="${sec2CardsData[i].icon}" alt="">
+                <h3 class="text_bold">
+                    ${sec2CardsData[i].title}
+                </h3>
+                <p class="text_grey">
+                    ${sec2CardsData[i].text}
+                </p>
+            </div>
+        </div>
+    `;
+}
