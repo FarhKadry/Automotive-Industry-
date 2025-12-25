@@ -1434,3 +1434,16 @@ footer{
     position: relative;
     bottom: 100px;
 }
+/* Default state */
+#neonSpan {
+  opacity: 0.7;
+  border-radius: 50%;
+  filter: blur(100px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Active / toggled state */
+#neonSpan.active {
+  opacity: 1;
+  filter: blur(200px);
+}

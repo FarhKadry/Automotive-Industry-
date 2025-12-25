@@ -26,3 +26,35 @@ arBtn.addEventListener("click", () => {
     model.activateAR();
   }
 });
+// ENGINE ANIMATIONNN
+let engBtn = document.getElementById("engBtn");
+let engineModel = document.getElementById("engineModel");
+let neonSpan = document.getElementById("neonSpan");
+
+let disassembled = false;
+
+const originalOrbit = engineModel.cameraOrbit;
+const disassembledOrbit = "2052deg 90deg 10m"; 
+
+engBtn.addEventListener("click", () => {
+  if (!disassembled) {
+    engineModel.play();
+
+    neonSpan.classList.add("active");
+
+    engBtn.textContent = "Assemble";
+
+    engineModel.cameraOrbit = disassembledOrbit;
+  } else {
+    engineModel.pause();
+    engineModel.currentTime = 0;
+
+    neonSpan.classList.remove("active");
+
+    engBtn.textContent = "Disassemble";
+
+    engineModel.cameraOrbit = originalOrbit;
+  }
+
+  disassembled = !disassembled;
+});
