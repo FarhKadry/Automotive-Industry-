@@ -1678,3 +1678,27 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
     width: 24px;
     height: 24px;
 }
+.prodSpecsifics{
+    top: 0;
+    margin-bottom: 44px;
+}
+.prodSpecsifics .team_logo,
+.prodSpecsifics .text_left{
+    opacity: 0;
+}
+.backBtn{
+    bottom: 0;
+}
+.backBtn img{
+    transform: scale(-1);
+}
+.backCont{
+    width: 246px;
+}
+.header_container2 .logo{
+    width: fit-content;
+
+}
+.statsBlock1 h4{
+    justify-self: end;
+}
