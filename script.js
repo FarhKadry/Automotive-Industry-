@@ -66,12 +66,12 @@ const sec2CardsData = [
     },
     {
         icon: "public/images/sec2icon02.svg",
-        title: "Relentless Innovation",
+        title: "Driver-First",
         text: "We continuously push the boundaries of motorsport technology, transforming bold ideas into race-winning solutions."
     },
     {
         icon: "public/images/sec2icon03.svg",
-        title: "Track-Tested Excellence",
+        title: "Engine Insurance",
         text: "Every component is validated under real racing conditions to ensure reliability, speed, and dominance on track."
     }
 ];
