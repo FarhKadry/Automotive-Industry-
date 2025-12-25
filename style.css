@@ -1312,18 +1312,7 @@ footer{
   border-radius: 0;
 
 }
-.scroll_animate2{
-    view-timeline: --scroll-tl;
-    animation-timeline: --scroll-tl;
-    animation-delay: cover 10%;
-    animation-range: cover 10% cover 35%;
-}
-.scroll_animate{
-    view-timeline: --scroll-tl;
-    animation-timeline: --scroll-tl;
-    animation-delay: cover 10%;
-    animation-range: cover 10% cover 15%;
-}
+
 #carsSection{
     position: relative;
     overflow: hidden;
@@ -1469,12 +1458,14 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
 }
 .newsletter_section {
     margin-bottom: 180px;
+    position: relative;
 }
 
 .newsletter_card {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
 }
 
 .newsletter_content {
@@ -1697,8 +1688,46 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
 }
 .header_container2 .logo{
     width: fit-content;
-
+    display: block;
 }
 .statsBlock1 h4{
     justify-self: end;
+}
+.animatedCar{
+    height: 140%;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: -20%;
+    z-index: 3;
+    animation: carAnim 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes carAnim {
+    from {
+        filter: blur(6px);
+        transform: translateX(-40vw);
+    }
+    to {
+        filter: blur(0);
+        transform: translateX(100vw);
+    }
+}
+.scroll_animate2{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 35%;
+}
+.scroll_animate{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 10%;
+    animation-range: cover 10% cover 15%;
+}
+.scroll_animate3{
+    view-timeline: --scroll-tl;
+    animation-timeline: --scroll-tl;
+    animation-delay: cover 20%;
+    animation-range: cover 20% cover 90%;
 }

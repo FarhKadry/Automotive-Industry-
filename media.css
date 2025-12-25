@@ -163,6 +163,10 @@ height: 380px;
     height: 323px;
     bottom: 175px;
 }
+.header_container2 .logo{
+    width: fit-content;
+    display: none;
+}
 }
 
 @media (min-width: 601px) and (max-width: 1041px){
@@ -345,6 +349,10 @@ height: 380px;
     height: 360px;
     bottom: 150px;
 }
+.header_container2 .logo{
+    width: fit-content;
+    display: block;
+}
 }
 /* DESKTOP */
 @media (min-width: 1041px){
@@ -524,5 +532,9 @@ nav{
 }
 .h1_3{
     font-size: 64px;
+}
+.header_container2 .logo{
+    width: fit-content;
+    display: block;
 }
 }
