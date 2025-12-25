@@ -45,7 +45,10 @@
         <div class="container">
                        <div class="flex_column">
                 <div class="felx_column hero1Text">
-                    <h4 class="text_uppercase text_grey text_regular text_center">Egypt’s First Race Car Manufacturer</h4>
+                    <div class="logosflex">
+                        <h4 class=" text_grey text_bold text_center">44</h4>
+                        <img src="public/images/logo01.svg" alt="">
+                    </div>
             <h1 class="h1_3"> Mercedes <br> AMG Petro</h1>
                 </div> 
         <div class="hero1_modelContainer hero2_modelContainer">
@@ -121,20 +124,8 @@
     </section>
     <!-- SECTION2 -->
     <section>
-        <div class="container flex_column padded_container">
-            <div class="mainTextbox">
-                <h2 class="gradientext fade_in scroll_animate2">Advance forwards</h2>
-                <span class="scale_in scroll_animate2"></span>
-            </div>
-            <div id="sec2Cards" class=" landingsec2Flex ">
-               
-            </div>
-        </div>
-    </section>
-    <!-- SECTION3 -->
-    <section>
         <div class="container padded_container2 landingsec3Flex">
-            <div class="flex_column  scroll_animate sec3Right ">
+            <div class="flex_column  scroll_animate sec3Right productsSec2Left">
                 <div class="mainTextbox">
                 <h2 class="gradientext fade_in scroll_animate2">built specifically for stability </h2>
                 <span class="scale_in scroll_animate2"></span>
@@ -149,39 +140,77 @@
         </button>
                 </div>
                 </div>
+                <div class="productsSec2Right">
+                    <img src="public/images/podium3.png">
+                    <model-viewer class="move_focus scroll_animate2"
+                src="public/models/amg_w14_s1__www.vecarz.com.glb"
+                disable-zoom
+                disable-tap
+                disable-zoom
+                interaction-prompt="none"
+                tone-mapping="neutral"
+                shadow-intensity="2"
+                camera-orbit="23.6deg 72.89deg 11.03m" field-of-view="20deg"></model-viewer>
+                </model-viewer>
+                </div>            
             </div>
-        </div>
     </section>
    <!-- GALLERY -->
-    <section id="carsSection" class="flex_column">
-        <div class="container flex_column padded_container">
-            <div class="mainTextbox">
-                <h2 class="gradientext text_center fade_in scroll_animate2">Gallery</h2>
-                <span class="scale_in scroll_animate2"></span>
+<section>
+    <div class="container padded_container">
+        <div class="mainTextbox">
+            <h2 class="gradientext fade_in scroll_animate2 text_center">GALLERY</h2>
+            <span class="scale_in scroll_animate2"></span>
+        </div>
+        <!--IMAGE SLIDER WRAPPER -->
+        <div class="slider_wrapper">
+        <div class="carCardsFade"></div>
+        <div class="carCardsFade carCardsFade2"></div>
+            <div class="slider_main">
+                <img src="public/images/model1Img01.jpg" class="slider_main_img active">
+                <img src="public/images/model1Img02.jpg" class="slider_main_img">
+                <img src="public/images/model1Img03.jpg" class="slider_main_img">
+                <img src="public/images/model1Img04.jpg" class="slider_main_img">
             </div>
-            <div class="filterTitle">
-                <img src="public/images/filtericon.svg">
-                <h4 class="text_uppercase text_grey text_regular text_center">Filter model by highest quality</h4>
-            </div>
-            <div class="filtersFlex">
-                <div>
-                    <img src="public/images/filters-03.png" alt="">
-                    <h6 class="text_bold">Engine</h6>
-                    <div class="neonCell"> <span></span></div>
+            
+            <!-- NAVS -->
+            <div class="slider_nav">
+                <div class="slider_thumb_wrapper active" data-slide="0">
+                    <div class="gradient_wrapper slider_thumb_border">
+                        <div class="slider_thumb">
+                            <img src="public/images/model1Img01.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="public/images/filters02.png" alt="">
-                    <h6 class="text_bold">Speed</h6>
-                    <div class="neonCell"> <span></span></div>
+                
+                <div class="slider_thumb_wrapper" data-slide="1">
+                    <div class="gradient_wrapper slider_thumb_border">
+                        <div class="slider_thumb">
+                            <img src="public/images/model1Img02.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <img src="public/images/filters01.png" alt="">
-                    <h6 class="text_bold">Chassis</h6>
-                    <div class="neonCell"> <span></span></div>
+                
+                <div class="slider_thumb_wrapper" data-slide="2">
+                    <div class="gradient_wrapper slider_thumb_border">
+                        <div class="slider_thumb">
+                            <img src="public/images/model1Img03.jpg">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider_thumb_wrapper" data-slide="3">
+                    <div class="gradient_wrapper slider_thumb_border">
+                        <div class="slider_thumb">
+                            <img src="public/images/model1Img04.jpg">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
      <!-- ROADANIMATION -->
    <section class="road_flex container">
     <div class="road-path" id="road1">

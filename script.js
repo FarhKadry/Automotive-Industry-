@@ -182,4 +182,3 @@ for (let i = 0; i < carsData.length; i++) {
   `;
 }
 
-
