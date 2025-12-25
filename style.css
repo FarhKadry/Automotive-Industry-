@@ -1532,6 +1532,8 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
     color: var(--grey);
     padding-bottom: 3px;
     border-bottom: 2px solid var(--grey);
+    position: relative;
+    bottom: 3px;
 }
 .productsSec2Left{
     width: calc(60% - 73px);
