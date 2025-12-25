@@ -135,13 +135,13 @@ const carsData = [
   {
     number: "14",
     name: "aramco AM ‘24",
-    logo: "public/images/logo07.svg",
+    logo: "public/images/logo02.svg",
     image: "public/images/poster07.png",
   },
   {
     number: "22",
     name: "VCARB '21",
-    logo: "public/images/logo08.svg",
+    logo: "public/images/logo05.svg",
     image: "public/images/poster08.png",
   },
   {
