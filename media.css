@@ -154,6 +154,7 @@ width: 100%;
 .productsSec2Right {
 width: 90%;
 height: 380px;
+align-self: center;
 }
 .h1_3{
     font-size: 48px;
@@ -166,6 +167,15 @@ height: 380px;
 .header_container2 .logo{
     width: fit-content;
     display: none;
+}
+.animatedCar{
+    height: 50%;
+    position: absolute;
+    top: 0;
+    animation: carAnim 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.backCont {
+    width: fit-content;
 }
 }
 
@@ -353,6 +363,15 @@ height: 380px;
     width: fit-content;
     display: block;
 }
+.animatedCar{
+    height: 80%;
+    position: absolute;
+    top: 0;
+    animation: carAnim 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.backCont {
+    width: fit-content;
+}
 }
 /* DESKTOP */
 @media (min-width: 1041px){
@@ -365,7 +384,6 @@ h1{
     width: 1000px;
     margin-top: 0;
     z-index: 2;
-
 }
 .hero1model{
     height: 521px;
@@ -536,5 +554,14 @@ nav{
 .header_container2 .logo{
     width: fit-content;
     display: block;
+}
+.animatedCar{
+    height: 140%;
+    position: absolute;
+    top: -20%;
+    animation: carAnim 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.backCont {
+    width: 246px;
 }
 }

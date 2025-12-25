@@ -1147,8 +1147,6 @@ footer{
     justify-content: space-between;
     align-items: flex-start;
     gap: 80px;
-    overflow: hidden;
-
     flex-direction: row;
 }
 
