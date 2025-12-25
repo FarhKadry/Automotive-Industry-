@@ -1544,7 +1544,9 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
 }
 .productsSec2Left{
     width: calc(60% - 73px);
-
+}
+.productsSec2Left .mainTextbox{
+    max-width: 401px;
 }
 .productsSec2Right{
     width: calc(40% - 73px);
@@ -1575,6 +1577,7 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
     margin-top: 42px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 120px;
 }
 .slider_main {
     width: 100%;
@@ -1610,11 +1613,9 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
 .slider_thumb_wrapper {
     cursor: pointer;
     transition: transform 300ms ease;
+    box-sizing: border-box;
 }
 
-.slider_thumb_wrapper:hover {
-    transform: translateY(-2px);
-}
 
 .slider_thumb_border {
     padding: 0px;
@@ -1650,32 +1651,30 @@ animation: hero2Anim 1.4s cubic-bezier(0.22, 1, 0.36, 1) 2.8s both;
 .slider_thumb_wrapper:hover .slider_thumb img {
     transform: scale(1.05);
 }
-@media (max-width: 1200px) {
-    .slider_thumb {
-        width: 220px;
-        height: 140px;
-    }
-}
-
-@media (max-width: 768px) {
-    .slider_main {
-        height: 400px;
-    }
-    
-    .slider_thumb {
-        width: 180px;
-        height: 110px;
-    }
-    
-    .slider_nav {
-        gap: 16px;
-    }
-}
 .slider_wrapper .carCardsFade{
-    width: 22%;
+    width: 18%;
+    pointer-events: none;
 }
 .carCardsFade2{
     left: unset;
     right: 0;
     transform: scaleX(-1);
+}
+.engAudioCont{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.engAudio{
+    width: 48px;
+    height: 48px;
+    padding: 22px;
+}
+.engAudio img{
+    width: 24px;
+    height: 24px;
 }

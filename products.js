@@ -58,3 +58,41 @@ engBtn.addEventListener("click", () => {
 
   disassembled = !disassembled;
 });
+const audio = document.getElementById("audio");
+const btn = document.getElementById("engAudio");
+const icon = document.getElementById("engAudioIcon");
+
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+  if (!isPlaying) {
+    audio.play();
+    icon.src = "public/images/audio2.svg";
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+    icon.src = "public/images/audio1.svg";
+  }
+
+  isPlaying = !isPlaying;
+});
+audio.addEventListener("ended", () => {
+  isPlaying = false;
+  icon.src = "public/images/audio1.svg";
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const thumbWrappers = document.querySelectorAll('.slider_thumb_wrapper');
+    const mainImages = document.querySelectorAll('.slider_main_img');
+    
+    thumbWrappers.forEach((wrapper, index) => {
+        wrapper.addEventListener('click', function() {
+            thumbWrappers.forEach(w => w.classList.remove('active'));
+            
+            mainImages.forEach(img => img.classList.remove('active'));
+            
+            this.classList.add('active');
+            
+            mainImages[index].classList.add('active');
+        });
+    });
+});
